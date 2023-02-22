@@ -1,0 +1,133 @@
+/* マウスオンする要素とツールチップを横並びにする */
+.c-tooltip {
+    display: inline-block;
+    position: relative;
+}
+
+/* ツールチップ共通の設定 */
+.c-tooltip::before,
+.c-tooltip::after {
+    -webkit-transition: all 0.2s;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.2s;
+    visibility: hidden;
+    z-index: 11;
+}
+
+
+/* ツールチップ吹き出しのひげ */
+.c-tooltip::before {
+    -webkit-transition: all 0.2s;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.2s;
+    visibility: hidden;
+    z-index: 11;
+
+    -webkit-transform: translateY(-50%);
+    border-color: transparent #5f6368 transparent transparent;
+    border-style: solid;
+    border-width: 3px 7px 3px 0;
+    content: "";
+    height: 0;
+    left: calc(100% - 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+}
+
+/* ツールチップ吹き出しの本体 */
+.c-tooltip::after {
+    -webkit-transform: translateY(-50%);
+    background: #5f6368;
+    border-radius: 3px;
+    color: #fff;
+    content: attr(data-tooltip);
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    left: calc(100% + 5px);
+    padding: 5px 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: pre;
+    overflow-wrap: break-word;
+}
+
+
+/* マウスオンしたときのカーソルの設定 */
+.c-tooltip:hover {
+    cursor: pointer;
+}
+
+.c-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* * * ツールチップ全体 * * */
+.question-mark {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+
+    /* 中身の情報 */
+    background: darkgray;
+    border-radius: 100%;
+
+    margin-left: 50px;
+}
+
+.question-mark::before {
+
+    /* 位置の情報 */
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+
+    /* 中身の情報 */
+    content: '?';
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.exclamation-mark {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+
+    /* 中身の情報 */
+    background: darkgray;
+    border-radius: 100%;
+
+    margin-left: 50px;
+}
+
+.exclamation-mark::before {
+
+    /* 位置の情報 */
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+
+    /* 中身の情報 */
+    content: '!';
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+}

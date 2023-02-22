@@ -1,0 +1,8 @@
+.cb_cols label{
+    width: 24%;
+    margin-bottom: -3px;
+}
+
+.marker_line80 {
+    background: linear-gradient(transparent 80%, #fec1fe 0%);
+}

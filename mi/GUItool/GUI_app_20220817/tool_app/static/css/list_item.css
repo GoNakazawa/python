@@ -1,0 +1,16 @@
+.list-item{
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: #fff;
+    border: 0px;
+}
+
+.heading{
+    border-width: 0px 0px 0px 7px;
+    border-color: #BBBBBB;
+    border-style: solid;
+    padding: 15px 10px;
+    margin: 0px 0px 10px 0px;
+}

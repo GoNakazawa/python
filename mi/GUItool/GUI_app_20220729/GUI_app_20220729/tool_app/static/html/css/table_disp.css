@@ -1,0 +1,23 @@
+.number_table>thead{
+    display: block;
+    word-wrap: break-word;
+}
+.number_table>tbody {
+    display: block;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    height: 150px;
+}
+
+.bulk_table>thead{
+    display: block;
+    word-wrap: break-word;
+}
+.bulk_table>tbody{
+    display: block;
+    word-wrap: break-word;
+}
+
+table.bulk_table > tbody > tr > th {
+    vertical-align: middle;
+}

@@ -1,0 +1,46 @@
+SSHの設定 for win10
+
+
+$ ssh-keygen -t ed25519 -C "gonakazawa0824@gmail.com"
+
+$ cd C:\Users\13191\.ssh\
+
+id_ed25519
+
+# 以下は "C:\Users\13191\.ssh\id_ed25519"での作業
+
+$ Set-Service ssh-agent -StartupType Manual
+$ Start-Service ssh-agent
+
+
+
+
+
+C:\Users\13191\.ssh\id_ed25519
+
+The key fingerprint is:
+SHA256:qV6bH+iOI6nQzDhUcmGXopacm/hOA+3QEZSmnPmzC9Q gonakazawa0824@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+| .o+ ..          |
+|  +oo.           |
+|o+Bo.            |
+|.%=.     .       |
+|=o*E    S        |
+|+@ o   . .       |
+|+oB o.. o .      |
+| +ooo..+ o .     |
+| .oo..oo=..      |
++----[SHA256]-----+
+
+C:\Users\13191\.ssh>
+
+
+
+
+            
+
+
+
+
+
